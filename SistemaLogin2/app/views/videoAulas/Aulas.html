@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="@{'public/stylesheets/Aulas.css'}">
+	<link rel="stylesheet" href="@{'public/stylesheets/estrelas.css'}">
+	
+
+<title>Vídeos</title>
+
+<style>
+
+/* Barra de navegação */
+
+	
+
+	#imgMen{
+	margin-top: 150px;
+	width: 25px;
+	margin-left: 30px;
+	}
+	
+	#imgriscoMenu{
+	width: 25px;
+	margin-left: 10px;
+	}
+	
+	 .imgLogin{
+    width: 25px;
+    height: 25px;
+    border-radius: 34px;
+    }
+    
+    ul{
+	 margin: 0;
+	 
+	 list-style: none;
+	 width: 25px;
+	 height: 25px;
+	
+	}
+	
+	li ul{
+	
+	display: none;
+	 padding:0px;
+	
+	}
+	
+	ul li a {
+	
+	display: block;
+	 text-decoration: none;
+	
+	}
+    
+     ul li {
+	position: relative;
+
+	}
+	li:hover ul.nivel1 {
+		display: block;
+		}
+		
+	ul.nivel1 li:hover ul.nivel2 {
+		display: block;
+	}
+	
+	.info{
+	
+	width: 210px;
+	background-color: yellow;
+	}
+	
+	.LinkSair{
+	color: red;
+	}
+	
+	.verde{
+	color: white;
+	background-color: green;
+	}
+	
+	.vermelho{
+	color: white;
+	background-color: red;
+	}
+	
+	
+	.listaLogin{
+	margin-right: 250px;
+	
+	}
+	
+	/* Barra de navegação */
+header, .navbar {
+  background-color: #44a43c;
+  
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#logo {
+  width: 150px;
+  margin-left: 1px;
+}
+
+.navbar-brand {
+  padding: 0;
+  color: #FFF;
+}
+
+.navbar-brand:hover {
+  color: #FFF;
+}
+
+#navbar-links a {
+  color: #FFF;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #FFF;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+	<header>
+    <div class="container" id="nav-container">
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        
+        <a class="navbar-brand" href="index.html">
+          <img id="logo" src="@{'public/imagens/logo pro-if.png'}" alt="hDC Agency"> 
+        </a>
+       
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            
+            
+            
+            
+            
+            
+            
+         
+          </div>
+        </div>
+      	
+    	
+      </nav>
+    </div>
+  </header>
+
+
+	<h3 class="heading"> video gallery</h3>
+
+<div class="container">
+
+	<div class="main-video">
+		<div class="video">
+			<video src="@{'public/VideosAulas/video 1.mp4'}" controls muted autoplay></video>
+			<h3 class="title">01. vídeo title goes here</h3>
+		</div>	
+	</div>
+
+	<div class="video-list">
+		<div class="vid active">
+			<video src="@{'public/VideosAulas/video 1.mp4'}" muted></video>
+			<h3 class="title">01. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 2.mp4'}" muted></video>
+			<h3 class="title">02. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 3.mp4'}" muted></video>
+			<h3 class="title">03. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 4.mp4'}" muted></video>
+			<h3 class="title">04. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 5.mp4'}" muted></video>
+			<h3 class="title">05. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 6.mp4'}" muted></video>
+			<h3 class="title">06. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 7.mp4'}" muted></video>
+			<h3 class="title">07. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 8.mp4'}" muted></video>
+			<h3 class="title">08. vídeo title goes here</h3>
+		</div>
+		<div class="vid">
+			<video src="@{'public/VideosAulas/video 9.mp4'}" muted></video>
+			<h3 class="title">09. vídeo title goes here</h3>
+		</div>
+	
+	</div>
+</div>
+
+<script>
+
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.main-video video');
+let title = document.querySelector('.main-video .title');
+
+listVideo.forEach(video =>{
+	video.onclick = () =>{
+		listVideo.forEach(vid => vid.classList.remove('active'));
+		video.classList.add('active');
+		if(video.classList.contains('active')){
+			let src = video.children[0].getAttribute('src');
+			mainVideo.src = src;
+			let text = video.children[1].innerHTML;
+			title.innerHTML = text;
+		};
+	};	
+});
+
+</script>
+<ul class="avaliacao">
+      <li class="star-icon ativo" data-avaliacao="1"></li>
+      <li class="star-icon" data-avaliacao="2"></li>
+      <li class="star-icon" data-avaliacao="3"></li>
+      <li class="star-icon" data-avaliacao="4"></li>
+      <li class="star-icon" data-avaliacao="5"></li>
+    </ul>
+<script>
+var stars = document.querySelectorAll('.star-icon');
+
+document.addEventListener('click', function(e){
+  var classStar = e.target.classList;
+  if(!classStar.contains('ativo')){
+    stars.forEach(function(star){
+      star.classList.remove('ativo');
+    });
+    classStar.add('ativo');
+    console.log(e.target.getAttribute('data-avaliacao'));
+  }
+});
+
+
+
+
+
+
+
+
+</script>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+</body>
+</html>

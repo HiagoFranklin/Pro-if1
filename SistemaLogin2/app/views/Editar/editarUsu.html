@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Editar</title>
+<head>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="@{'public/CSSLogin/images/icons/favicon.ico'}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/bootstrap/css/bootstrap.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/iconic/css/material-design-iconic-font.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animate/animate.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/css-hamburgers/hamburgers.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animsition/css/animsition.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/select2/select2.min.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/daterangepicker/daterangepicker.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/util.css'}">
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/main.css'}">
+<!--===============================================================================================-->
+   
+
+
+
+
+
+<style>
+
+#imgLogo{
+width: 280px;
+}
+
+#imagem{
+margin-top: 10px;
+border-radius: 70px;
+	width: 120px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#divDicaImagem{
+background-color: #D3D3D3;
+width: 290px;
+height: 100px;
+margin-left: -2px;
+border-radius: 10px; 
+margin-top: 5px;
+}
+
+#imgDica{
+width: 25px;
+}
+
+.txtDica{
+margin-left: 2px;
+margin-right: px;
+}
+
+#hrFoto{
+color: white;
+
+}
+#imagem{
+margin-left: 97px;
+width: 90px;
+}
+#imgPerfil{
+margin-left: 70px;
+border-radius: 70px;
+	width: 140px;
+	border: solid white	;
+	
+}
+     
+</style>
+
+
+
+</head>
+
+
+<body background="@{'public/imagens/fundoTela.png'}">
+
+
+
+<br/>
+
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="@{Usuarios.salvar}" method="post" enctype="multipart/form-data">
+					<span class="login100-form-title p-b-48">
+						<img id="imgLogo" src="@{'public/CSSLogin/imagens/imglogo.png'}">
+					</span>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="usuario.nome" value="${usuario?.nome}">
+						<span class="focus-input100" data-placeholder="nome"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="usuario.sobrenome" value="${usuario?.sobrenome}">
+						<span class="focus-input100" data-placeholder="Sobrenome"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input"  >
+						<input class="input100" type="text" name="usuario.email" value="${usuario?.email}">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+					
+					
+					<div >
+					<h2 class="h2Foto">Adicione uma foto para perfil</h2>
+					
+					
+					<img src="../uploads/${usuario.id}/${usuario.nomeFoto}" id="imgPerfil" style="width: 150px; height: 150px;">
+					<input class="inputFoto" type="file"  name="foto" id="imagem" onchange="previewImagem()">
+					
+					<div id="divDicaImagem">
+					
+					<img id="imgDica" src="@{'public/imagens/imgDica.png'}">
+					A imagem escolhida servirá para sua foto <p class="txtDica">de perfil na página principal, recomenda-se 
+					imagens com dimensões iguais. Ex: 150x150.</p>
+					
+					</div>
+					</div>
+					
+					
+					
+					
+					<br/>
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Cadastre-se
+							</button>
+						</div>
+					</div>
+					<br/>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	function previewImagem(){
+		var imagem = document.querySelector('input[name=foto]').files[0];
+		var preview = document.querySelector('img[id=imgPerfil]');
+		
+		var reader = new FileReader();
+		
+		reader.onloadend = function(){
+			preview.src = reader.result;
+		}
+
+		if(imagem){
+			reader.readAsDataURL(imagem);
+		}else{
+			preview.src = "";
+		}
+	}
+
+</script>
+
+
+
+
+
+</div>

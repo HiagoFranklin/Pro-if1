@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta >
+		<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="@{'public/CSSLogin/images/icons/favicon.ico'}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/bootstrap/css/bootstrap.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/iconic/css/material-design-iconic-font.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animate/animate.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/css-hamburgers/hamburgers.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animsition/css/animsition.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/select2/select2.min.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/daterangepicker/daterangepicker.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/util.css'}">
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/main.css'}">
+<!--===============================================================================================-->
+    
+
+		<style>
+
+		    #imgLogo{
+width: 280px;
+margin-top: -40px;
+}
+
+#txt333{
+color: #44a43c;
+}
+		
+		.botaoLogar{
+    margin-left: 172px;
+    background-color: #44a43c;
+    height: 50px;
+  	width: 300px;
+    border-radius: 10px;
+    border-bottom-color: #44a43c;
+    }
+    
+    .botaoLogar:hover{
+    background-color: green;
+    }
+    
+    
+    #table{
+    
+    background-color: white;
+    border-radius: 25px;
+    margin-left: 360px;
+	margin-right: 360px;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	
+    -webkit-box-shadow: 9px 7px 5px rgba(211,211,211, 0.77);
+		-moz-box-shadow:    9px 7px 5px rgba(211,211,211, 0.77);
+		box-shadow:         9px 7px 5px rgba(211,211,211, 0.77);
+	
+    }
+    
+    @media (max-width: 600px) {
+     table{padding: 20px;}
+	}
+   
+    @media (max-width: 600px) {
+     .imglogo{width: 150px;}
+	}
+    
+    
+    #LinkEsqueciSenha{
+    color: #44a43c;
+    text-decoration: none;
+    text-align: center;
+    }
+    
+    
+    
+    .imglogo{
+    text-align: center;
+    }
+    
+    .imgLogoLogin{
+   	margin-left: 570px;
+    width: 200px;
+    margin-top: 30px;
+    }
+    
+    .formClass{
+    text-align: center;
+    }
+    
+    
+    .tituloLogin{
+    margin-top: 10px;
+    color: #44a43c;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    }
+    
+    .txDados{
+    color: #44a43c;
+    font-size: 15px;
+    text-align: center;
+    
+    }
+    
+    h4{
+    color: white;
+    
+    }
+    
+  
+
+.txtBusca{
+  margin-top: 10px;
+  float: left;
+  background-color:transparent;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:250px;
+}
+
+.divForm{
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.imgCmpLogin{
+float: left;
+width: 30px;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+hr{
+background-color: #44a43c;
+
+}
+
+.imgCadeado{
+width: 20px;
+
+}
+
+input::placeholder {
+  color: white;
+}
+		
+		
+		
+		
+		</style>
+
+</head>
+<body background="@{'public/imagens/imgLogin.png'}">
+
+#{if flash.error}
+	<div>${flash.error}</div>
+#{/if}
+
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="@{Login.form}" method="post">
+					<span class="login100-form-title p-b-48">
+						<img id="imgLogo" src="@{'public/CSSLogin/imagens/imglogo.png'}">
+					</span>
+					<div>
+						O link para a nova senha foi enviado para o seu e-mail.
+					</div>
+
+					
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Voltar para página de Login
+							</button>
+						</div>
+					</div>
+					<br/>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

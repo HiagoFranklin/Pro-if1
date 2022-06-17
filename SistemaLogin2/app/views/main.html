@@ -1,0 +1,365 @@
+
+       
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>#{get 'title' /}</title>
+	<link rel="stylesheet" href="@{'public/stylesheets/main.css'}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  	<!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+  <!-- Progress Bar -->
+  <script src="js/progressbar.min.js"></script>
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    	
+	<style>
+	
+	
+	
+	#imgMen{
+	margin-top: 150px;
+	width: 25px;
+	margin-left: 30px;
+	}
+	
+	#imgriscoMenu{
+	width: 25px;
+	margin-left: 10px;
+	}
+	
+	 .imgLogin{
+    width: 25px;
+    height: 25px;
+    border-radius: 34px;
+    }
+    
+    ul{
+	 margin: 0;
+	 
+	 list-style: none;
+	 width: 25px;
+	 height: 25px;
+	
+	}
+	
+	li ul{
+	
+	display: none;
+	 padding:0px;
+	
+	}
+	
+	ul li a {
+	
+	display: block;
+	 text-decoration: none;
+	
+	}
+    
+     ul li {
+	position: relative;
+
+	}
+	li:hover ul.nivel1 {
+		display: block;
+		}
+		
+	ul.nivel1 li:hover ul.nivel2 {
+		display: block;
+	}
+	
+	.info{
+	
+	width: 60px;
+	background-color: #52F238;
+	}
+	
+	.LinkSair{
+	color: red;
+	}
+	
+	.verde{
+	color: white;
+	background-color: green;
+	}
+	
+	.vermelho{
+	color: white;
+	background-color: red;
+	}
+	
+	
+	.listaLogin{
+	margin-right: 250px;
+	
+	}
+	
+	/* Barra de navegação */
+header, .navbar {
+  background-color: #ffff;
+  height: 90px;
+		
+		-webkit-box-shadow: 9px 7px 5px rgba(211,211,211, 0.77);
+		-moz-box-shadow:    9px 7px 5px rgba(211,211,211, 0.77);
+		box-shadow:         9px 7px 5px rgba(211,211,211, 0.77);
+	
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#logo {
+  width: 100px;
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.navbar-brand {
+  padding: 0;
+  color: #FFF;
+}
+
+.navbar-brand:hover {
+  color: #FFF;
+}
+
+#navbar-links a {
+  color: red;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #FFF;
+}
+	
+	#paragrafo{
+	margin-top: 800px;
+	}
+	
+	#divBusca{
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  border-radius:30px;
+  width:300px;
+  height:32px;
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:191px;
+}
+
+#btnBusca{
+  border:none;
+  float:left;
+  height:32px;
+  border-radius:0 7px 7px 0;
+  width:70px;
+  font-weight:bold;
+  background:#44a43c;
+}
+
+#divBusca button{
+  float:right;
+  height: 30px;
+  width: 40px;
+}
+	#divBusca img{
+  
+  height: 25px;
+}
+	#imgPesquisa{
+	float: right;
+	margin-top: 3px;
+	}
+	
+	input placeholder {
+  color: #fffff;
+}
+
+
+@media (max-width: 600px) {
+     .sidebar{display: none;}
+	}
+	
+	@media (max-width: 600px) {
+     #divBusca{display: none;}
+	}
+	
+	@media (max-width: 600px) {
+     .navbar{background-color: #44a43c}
+	}
+	
+	@media (max-width: 600px) {
+     . {display: none;}
+	}
+	
+	.imgLogado{
+	width: 160px;
+	}
+	
+	.imgPerfil{
+	border-radius: 70px;
+	width: 140px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+	
+	#divImgPerfil{
+	background-color: #44a43c;
+	border-radius: 80px;
+	margin-left: 43px;
+	margin-right: 43px;
+	}
+	
+	#divImgBranca{
+	background-color: #ffff;
+	border-radius: 150px;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	}
+	
+	#loginPerfil{
+	margin-right: 40px;
+	}
+	
+	.infoVoltar{
+	display: none;
+	}
+	</style>
+	
+	
+	
+	
+	
+	
+	</head>
+<body>
+
+	<header>
+    <div class="container" id="nav-container">
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         <a class="navbar-brand" href="index.html">
+          <img id="logo"  src="@{'public/imagens/imglogo.png'}" alt="hDC Agency"> 
+        </a> 
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            
+            
+            <div id="Cabecalho">
+    	<div id=loginPerfil>
+    	<ul>
+    	<li><a href="#"><img class="imgLogin" src="@{'public/images/images.png'}"></a>
+    		<ul class="nivel1">
+    			<li class="infoVoltar"><a href="@{pagina1.pg1}"><span>Voltar</span></a></li>
+    			<li class="info"><a href="@{Login.sair}"><ion-icon name="log-out-outline"></ion-icon><span>Sair</span></a></li>
+    	</ul>
+    	</li>
+    	</ul>
+    	</div>
+    	</div>
+            
+            
+            
+            
+         
+          </div>
+        </div>
+      	
+      </nav>
+    </div>
+  </header>
+    	
+    	<input type="checkbox" id="check">
+    <!--header começo-->
+    
+        <label for="check">
+            <ion-icon name="menu-outline" id="sidebar_btn"></ion-icon>
+        </label>
+    
+    <!--header final-->
+    <!--sidebar começo-->
+    <div class="sidebar">
+        <center>
+            
+            #{if 'usuario.nomeFoto' == null}
+            	<img src="../uploads/7/lego3.jpg" style="width: 100px;">
+			#{/if}
+			#{else}
+			<div id="divImgPerfil">
+			<div id="divImgBranca">
+			<img class="imgPerfil" src="../uploads/${session.get('usuario.id')}/${session.get('usuario.nomeFoto')}" > 
+			</div>
+			</div>
+			#{/else}
+			
+			
+			
+			
+            <h2 >${session.get("usuario.nome")}</h2>
+            <h7 >${session.get("usuario.email")}</h7>
+        </center>
+        <a href="@{pagina1.pg1}"><ion-icon name="home-outline"></ion-icon><span>Início</span></a>
+        <a href="@{Usuarios.editar(session.get('usuario.id'))}"><ion-icon name="person-outline"></ion-icon><span>Minha Conta</span></a>
+        <a href="@{Contato.index}"><ion-icon name="call-outline"></ion-icon><span>Contatos</span></a>
+       
+           </div>
+    <!--sidebar final-->
+    <div class="content"></div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    	
+    	
+    	
+    	
+    	<br/>
+    	<br/>
+    	
+    	
+    	#{if flash.success}
+    		<div class="verde">${flash.success}</div>
+    	#{/if}
+    	
+    	#{if flash.error}
+    		<div class="vermelho">${flash.error}</div>
+    	#{/if}
+    	
+        #{doLayout /}
+        
+        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+    </body>
+</html>

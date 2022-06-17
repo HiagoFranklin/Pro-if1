@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta >
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="@{'public/CSSLogin/images/icons/favicon.ico'}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/bootstrap/css/bootstrap.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/iconic/css/material-design-iconic-font.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animate/animate.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/css-hamburgers/hamburgers.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animsition/css/animsition.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/select2/select2.min.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/daterangepicker/daterangepicker.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/util.css'}">
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/main.css'}">
+<!--===============================================================================================-->
+    
+    
+    <style>
+    
+    #imgLogo{
+width: 280px;
+}
+
+#txt333{
+color: #44a43c;
+}
+    </style>
+    
+   
+    
+    </head>
+    <body background="@{'public/imagens/imgLogin.png'}">
+    	
+
+
+
+#{if flash.success}
+	<div class="divflash" >${flash.success}</div>
+#{/if}
+
+
+
+#{if flash.error}
+	<div class="msgVermelho">${flash.error}</div>
+#{/if}
+
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="@{Login.logar}" method="post">
+					<span class="login100-form-title p-b-48">
+						<img id="imgLogo" src="@{'public/CSSLogin/imagens/imglogo.png'}">
+					</span>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="senha">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
+					<div class="text-center p-t-115">
+						<a id="txt333" href="@{Login.esqueciMinhaSenha}">Esqueceu a senha?</a><br/>
+						<span class="txt1">
+							
+							Não tem uma conta? 
+						</span>
+
+						<a class="txt2" href="@{Usuarios.form}">
+							Cadastre-se
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+
+ </body>
+</html>

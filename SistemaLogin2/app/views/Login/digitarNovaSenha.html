@@ -1,0 +1,16 @@
+#{if flash.error}
+	<div>${flash.error}</div>
+#{/if}
+
+<form action="@{Login.salvarNovaSenha}" method="post">
+
+<input type="hidden" name="hash" value="${hash}">
+
+Nova senha <input name="senha" type="password"> <br/>
+
+Confirme a nova senha<input name="senhaConfirmacao" type="password"> <br/>
+
+<button>Salvar</button>
+
+
+</form>

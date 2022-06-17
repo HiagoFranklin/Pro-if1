@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta >
+       
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	    
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">	    
+
+<script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+<script src="@{'/public/javascripts/jquery.mask.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+<script src="@{'/public/javascripts/mascaras.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+<script src="@{'/public/javascripts/popper.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+	<script  src="@{'public/javascripts/script.js'}"></script>
+	
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="@{'public/CSSLogin/images/icons/favicon.ico'}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/bootstrap/css/bootstrap.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/fonts/iconic/css/material-design-iconic-font.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animate/animate.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/css-hamburgers/hamburgers.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/animsition/css/animsition.min.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/select2/select2.min.css'}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/vendor/daterangepicker/daterangepicker.css'}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/util.css'}">
+	<link rel="stylesheet" type="text/css" href="@{'public/CSSLogin/css/main.css'}">
+<!--===============================================================================================-->
+   
+<style >
+
+	    #imgLogo{
+width: 280px;
+}
+
+#txt333{
+color: #44a43c;
+}
+	
+	
+    .botaoLogar{
+    margin-left: 200px;
+    margin-top: 30px;
+    background-color: #44a43c;
+    height: 50px;
+  	width: 300px;
+    border-radius: 10px;
+    
+    }
+    
+    .botaoLogar:hover{
+    background-color: green;
+    }
+    
+    .botaoLogar:hover:disabled{
+    background-color: #696969;
+    }
+    
+    
+    #divCadastro{
+    
+    background-color: white;
+    border-radius: 25px;
+    float: right;
+    margin-right: 100px;
+	width: 700px;
+	margin-top: 7px;
+	margin-bottom: 0px;
+	
+    -webkit-box-shadow: 9px 7px 5px rgba(211,211,211, 0.77);
+		-moz-box-shadow:    9px 7px 5px rgba(211,211,211, 0.77);
+		box-shadow:         9px 7px 5px rgba(211,211,211, 0.77);
+	
+    }
+    
+    @media (max-width: 600px) {
+     table{padding: 20px;}
+	}
+   
+    @media (max-width: 600px) {
+     .imglogo{width: 150px;}
+	}
+    
+    
+    #LinkEsqueciSenha{
+    color: #44a43c;
+    text-decoration: none;
+    text-align: center;
+    }
+    
+    
+    
+    .imglogo{
+    text-align: center;
+    }
+    
+   
+    
+    .formClass{
+    text-align: center;
+    }
+    
+    
+    .tituloLogin{
+    margin-top: 10px;
+    color: #44a43c;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    }
+    
+    .txDados{
+    color: #44a43c;
+    font-size: 15px;
+    text-align: center;
+    
+    }
+    
+    h4{
+    color: white;
+    margin-top: 7px;
+    }
+    
+  
+
+.txtBusca{
+  margin-top: 10px;
+  float: left;
+  background-color:transparent;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:250px;
+}
+
+.divForm1{
+  float: left;
+  margin-left: 30px;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.divForm2{
+  margin-left: 30px;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 70px;	
+}
+
+.divForm3{
+  float: left;
+  margin-left: 30px;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;	
+}
+
+.divForm4{
+  margin-right: 40px;
+  float: right;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 360px;
+  width: 300px;
+  border-radius: 10px;
+
+}
+
+.divForm5{
+  float: left;
+  margin-left: 30px;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 30px;	
+}
+
+.divForm6{
+  float: left;
+  margin-left: 30px;
+  background-color:#44a43c;
+  border:solid 2px #fffff;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 30px;	
+}
+
+.imgCmpLogin{
+float: left;
+width: 30px;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+hr{
+background-color: #44a43c;
+
+}
+
+.imgCadeado{
+width: 20px;
+
+}
+
+input::placeholder {
+  color: white;
+}
+
+button:disabled {
+  background-color: #696969;
+}
+
+.h2Foto{
+font-size: 20px;
+
+}
+
+
+
+.card{
+background-color: #44a43c;
+width: 380px;
+float: left;
+margin-top: 30px;
+margin-left: 10px;
+}
+
+#divh3{
+width: 379px;
+}
+
+.container{
+
+width: 490px;
+float: left;
+}
+
+#divCronometro{
+float: left;
+}
+
+#imgLogoLogin{
+margin-left: 170px;
+width: 250px;
+margin-top: 125px;
+}
+
+.h2Foto{
+text-align: center;
+color: white;
+}
+
+#imgPerfil{
+margin-left: 70px;
+border-radius: 70px;
+	width: 140px;
+	border: solid white	;
+	
+}
+
+#imagem{
+margin-top: 10px;
+border-radius: 70px;
+	width: 120px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#divDicaImagem{
+background-color: #D3D3D3;
+width: 290px;
+height: 100px;
+margin-left: -2px;
+border-radius: 10px; 
+margin-top: 5px;
+}
+
+#imgDica{
+width: 25px;
+}
+
+.txtDica{
+margin-left: 2px;
+margin-right: px;
+}
+
+#hrFoto{
+color: white;
+
+}
+#imagem{
+margin-left: 97px;
+width: 90px;
+}
+
+@media (max-width: 700px) {
+     #divDicaImagem{
+     margin-left: 40px;
+     }
+	}	
+
+@media (max-width: 700px) {
+     #imagem{
+     margin-left: 135px;
+     }
+	}
+
+@media (max-width: 700px) {
+     #imgPerfil{
+     margin-left: 105px;
+     }
+	}
+
+
+
+</style>
+
+</head>
+    <body background="@{'public/imagens/imgLogin.png'}">
+
+
+<div id="Celular">
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="@{Usuarios.salvar}" method="post" enctype="multipart/form-data">
+					<span class="login100-form-title p-b-48">
+						<img id="imgLogo" src="@{'public/CSSLogin/imagens/imglogo.png'}">
+					</span>
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="usuario.nome">
+						<span class="focus-input100" data-placeholder="nome"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="usuario.sobrenome">
+						<span class="focus-input100" data-placeholder="Sobrenome"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="usuario.email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+					
+					
+					<div >
+					<h2 class="h2Foto">Adicione uma foto para perfil</h2>
+					
+					
+					<img src="@{'public/images/images.png'}" id="imgPerfil" style="width: 150px; height: 150px;">
+					<input class="inputFoto" type="file"  name="foto" id="imagem" onchange="previewImagem()">
+					
+					<div id="divDicaImagem">
+					
+					<img id="imgDica" src="@{'public/imagens/imgDica.png'}">
+					A imagem escolhida servirá para sua foto <p class="txtDica">de perfil na página principal, recomenda-se 
+					imagens com dimensões iguais. Ex: 150x150.</p>
+					
+					</div>
+					</div>
+					
+					
+					
+					
+					<br/>
+					
+					
+					
+					
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="senha">
+						<span class="focus-input100" data-placeholder="Senha"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="usuario.confirmacaoSenha">
+						<span class="focus-input100" data-placeholder="Confirmar Senha"></span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Cadastre-se
+							</button>
+						</div>
+					</div>
+					<br/>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	function previewImagem(){
+		var imagem = document.querySelector('input[name=foto]').files[0];
+		var preview = document.querySelector('img[id=imgPerfil]');
+		
+		var reader = new FileReader();
+		
+		reader.onloadend = function(){
+			preview.src = reader.result;
+		}
+
+		if(imagem){
+			reader.readAsDataURL(imagem);
+		}else{
+			preview.src = "";
+		}
+	}
+
+</script>
+
+<br/>
+
+</div>
+
+
+
+
+
+</body>
+</html>
